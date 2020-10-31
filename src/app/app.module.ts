@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PoModule, PoNavbarModule } from '@po-ui/ng-components';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     PoModule,
     PoNavbarModule,
+    HttpClientModule,
+    HomeModule,
     RouterModule.forRoot([])
   ],
   providers: [],
