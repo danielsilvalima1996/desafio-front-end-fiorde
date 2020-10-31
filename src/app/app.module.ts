@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { PoModule, PoNavbarModule } from '@po-ui/ng-components';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeModule } from './home/home.module';
 
 
 
@@ -20,6 +21,7 @@ import { AppComponent } from './app.component';
     PoModule,
     PoNavbarModule,
     HttpClientModule,
+    HomeModule,
     RouterModule.forRoot([])
   ],
   providers: [],
