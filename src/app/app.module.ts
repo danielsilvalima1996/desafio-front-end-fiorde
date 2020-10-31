@@ -1,14 +1,13 @@
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { NgModule } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
+import { PoModule, PoNavbarModule } from '@po-ui/ng-components';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PoModule, PoNavbarModule } from '@po-ui/ng-components';
-import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-import { HomeModule } from './home/home.module';
+
+
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import { HomeModule } from './home/home.module';
     PoModule,
     PoNavbarModule,
     HttpClientModule,
-    HomeModule,
     RouterModule.forRoot([])
   ],
   providers: [],
