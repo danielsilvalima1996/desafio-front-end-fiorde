@@ -1,6 +1,10 @@
 <div class="po-wrapper">
-  <po-toolbar p-title="AppName"></po-toolbar>
 
-  <po-menu [p-menus]="menus"></po-menu>
+    <po-navbar 
+      [p-items]="menus"
+      p-shadow="true">
+    </po-navbar>
+
+    <router-outlet></router-outlet>
 
 </div>
