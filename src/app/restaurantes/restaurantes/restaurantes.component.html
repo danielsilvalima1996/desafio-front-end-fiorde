@@ -1,1 +1,32 @@
-<p>restaurantes works!</p>
+<div class="div-geral">
+
+    <h1 class="tituto-page">Restaurantes</h1>
+
+    <po-container>
+        
+        <po-divider p-label="Filtros"></po-divider>
+
+        <form [formGroup]="restauranteForm" class="po-row">
+            <po-input class="po-md-6" formControlName="nome" p-clean="true" p-label="Nome"></po-input>
+        </form>
+
+        <div class="po-row">
+            <po-button class="po-mt-2 po-mb-2 po-md-3" p-label="Pesquisar" (click)="findByNome(controls.nome.value)"></po-button>
+            <po-button class="po-mt-2 po-mb-2 po-md-3" p-label="Cadastrar Novo Restaurante" (click)="adicionarRestaurante()" p-type="primary"></po-button>
+        </div>
+
+    </po-container>
+
+    <po-table class="po-mt-2"
+        [p-columns]="table.columns"
+        [p-items]="table.items"
+        p-height="300"
+        p-striped="true"
+        p-hide-text-overflow="true"></po-table>
+
+</div>
+
+<po-loading-overlay *ngIf="loading"
+    p-screen-lock="true"
+    p-text="Carregando" >
+</po-loading-overlay>
