@@ -1,0 +1,31 @@
+<div class="div-geral">
+
+    <h1 class="tituto-page">Cadastro de Prato</h1>
+
+    <po-container>
+
+        <po-divider p-label="Dados"></po-divider>
+
+        <form [formGroup]="pratoForm">
+            <div class="po-row">
+                <po-select class="po-md-6" formControlName="idRestaurante" p-label="Restaurante" [p-options]="listaRestaurantes"></po-select>
+            </div>
+            <div class="po-row">
+                <po-input class="po-md-6" formControlName="prato" p-label="Prato" p-clean="true"></po-input>
+            </div>
+            <div class="po-row">
+                <po-decimal class="po-md-3" formControlName="preco" p-label="Preço (R$)" p-clean="true" p-decimals-length="2"></po-decimal>
+            </div>
+        </form>
+
+        <div class="po-row">
+            <po-button class="po-mt-2 po-mb-2 po-md-3" p-label="Cancelar" p-type="danger" (click)="voltar()"></po-button>
+            <po-button class="po-mt-2 po-mb-2 po-md-3" p-label="Salvar" (click)="createPrato(pratoForm.value)"></po-button>
+        </div>
+
+    </po-container>
+
+</div>
+
+<po-loading-overlay *ngIf="loading" p-screen-lock="true" p-text="Carregando">
+</po-loading-overlay>
