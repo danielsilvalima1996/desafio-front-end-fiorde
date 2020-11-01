@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class PratoService {
 
-  private url: string = `${environment.api}/restaurante`;
+  private url: string = `${environment.api}/prato`;
 
   constructor(private http: HttpClient) { }
 

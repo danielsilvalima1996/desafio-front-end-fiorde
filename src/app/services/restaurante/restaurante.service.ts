@@ -18,7 +18,7 @@ export class RestauranteService {
   }
 
   public findAllList(): Observable<Array<Restaurante>> {
-    return this.http.get(`${this.url}`) as Observable<Array<Restaurante>>;
+    return this.http.get(`${this.url}/list`) as Observable<Array<Restaurante>>;
   }
 
   public findById(id: number): Observable<Restaurante> {
