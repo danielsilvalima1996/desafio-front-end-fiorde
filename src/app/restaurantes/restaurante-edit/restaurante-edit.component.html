@@ -1,0 +1,25 @@
+<div class="div-geral">
+
+    <h1 class="tituto-page">Edição Restaurante</h1>
+
+    <po-container>
+        
+        <po-divider p-label="Dados"></po-divider>
+
+        <form [formGroup]="restauranteForm" class="po-row">
+            <po-input class="po-md-6" formControlName="nome" p-label="Nome do restaurante" p-clean="true"></po-input>
+        </form>
+
+        <div class="po-row">
+            <po-button class="po-mt-2 po-mb-2 po-md-3" p-label="Cancelar" p-type="danger" (click)="voltar()"></po-button>
+            <po-button class="po-mt-2 po-mb-2 po-md-3" p-label="Salvar" (click)="alterRestaurante(restauranteForm.value)"></po-button>
+        </div>
+
+    </po-container>
+
+</div>
+
+<po-loading-overlay *ngIf="loading"
+    p-screen-lock="true"
+    p-text="Carregando" >
+</po-loading-overlay>
