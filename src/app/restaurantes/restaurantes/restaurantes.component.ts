@@ -64,7 +64,7 @@ export class RestaurantesComponent implements OnInit {
       },
         (error: HttpErrorResponse) => {
           this.loading = false;
-          this.notificationService.error(error.message);
+          this.notificationService.error(`Error ao excluir restaurante ${item.nome}`);
         })
   }
 
