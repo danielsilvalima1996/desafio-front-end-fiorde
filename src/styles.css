@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+.tituto-page {
+    font-size: 30px;
+    margin: 25px;
+}
+
+.div-geral {
+    padding: 20px;
+}
