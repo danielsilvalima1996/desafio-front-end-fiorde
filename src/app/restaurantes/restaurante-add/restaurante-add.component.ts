@@ -26,7 +26,6 @@ export class RestauranteAddComponent implements OnInit {
 
   ngOnInit(): void {
     this.restauranteForm = this.fb.group({
-      id: ['', []],
       nome: ['', [Validators.required]]
     })
   }
