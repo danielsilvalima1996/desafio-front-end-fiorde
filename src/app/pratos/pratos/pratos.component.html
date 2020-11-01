@@ -1,1 +1,21 @@
-<p>pratos works!</p>
+<div class="div-geral">
+
+    <h1 class="tituto-page">Pratos</h1>
+
+    <div class="po-row">
+        <po-button class="po-mt-2 po-mb-2 po-md-3" p-label="Cadastrar Novo Prato" (click)="adicionarPrato()" p-type="primary"></po-button>
+    </div>
+
+    <po-table 
+        [p-columns]="table.columns"
+        [p-items]="table.items"
+        p-height="300"
+        p-striped="true"
+        p-hide-text-overflow="true"></po-table>
+
+</div>
+
+<po-loading-overlay *ngIf="loading"
+    p-screen-lock="true"
+    p-text="Carregando" >
+</po-loading-overlay>
